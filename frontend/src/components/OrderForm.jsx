@@ -47,7 +47,9 @@ const OrderForm = () => {
 
   return (
     <section>
+        <h2 className="tittle-create-ship">Creating Shipment</h2>
         <form onSubmit={onSubmit}>
+            <div className="form-individual">
             <label htmlFor='name'>Name</label>
             <input 
             type='text'
@@ -55,8 +57,11 @@ const OrderForm = () => {
             id='name'
             value={name}
             onChange={onChange}
+            className='input-shipment'
             />
+            </div>
 
+            <div className="form-individual">
             <label htmlFor='address'>Adress</label>
             <input 
             type='text'
@@ -64,8 +69,12 @@ const OrderForm = () => {
             id='address'
             value={address}
             onChange={onChange}
+            className='input-shipment'
             />
+            </div>
 
+            <div className="form-group">
+                <div className='form-individual'>
             <label htmlFor='postalCode'>Postal Code</label>
             <input 
             type='text'
@@ -73,8 +82,10 @@ const OrderForm = () => {
             id='postalCode'
             value={postalCode}
             onChange={onChange}
+            className='input-shipment short-input'
             />
-
+            </div>
+             <div className='form-individual'>
             <label htmlFor='city'>City</label>
             <input 
             type='text'
@@ -82,8 +93,13 @@ const OrderForm = () => {
             id='city'
             value={city}
             onChange={onChange}
+            className='input-shipment medium-input'
             />
-             
+            </div>
+            </div>
+
+            <div className="form-group">
+                <div className='form-individual'>
             <label htmlFor='province'>Province</label> 
             <input 
             type='text'
@@ -91,8 +107,11 @@ const OrderForm = () => {
             id='province'
             value={province}
             onChange={onChange}
+            className='input-shipment short-input'
             />
-             
+            </div>
+
+             <div className='form-individual'>
             <label htmlFor='phone'>Phone</label>
             <input 
             type='number'
@@ -100,10 +119,14 @@ const OrderForm = () => {
             id='phone'
             value={phone}
             onChange={onChange}
+            className='input-shipment medium-input'
             />
-                    
+            </div> 
+
+            </div>
+   
             <div>
-               <button type='submit'>Submit</button>    
+               <button className='btn btn-ship'>Submit</button>    
             </div>   
         
 
@@ -115,6 +138,10 @@ const OrderForm = () => {
 export default OrderForm
 
 /*
+<div>
+               <button type='submit'>Submit</button>    
+            </div>
+
  name: {
         type: String,
         require: [true, 'Please add a name']

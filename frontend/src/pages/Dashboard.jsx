@@ -5,6 +5,7 @@ import OrderForm from "../components/OrderForm"
 import Spinner from '../components/Spinner'
 import { getOrders, reset } from "../features/orders/orderSlice"
 import OrderItem from "../components/OrderItem"
+import Sidebar from "../components/Sidebar"
 
 const Dashboard = () => {
   const navigate = useNavigate()
@@ -40,9 +41,11 @@ console.log(orders)
     <>
     <section>
       <h1>Welcom {user && user.name}</h1>
-      <p>Shipment Dashboard</p>
     </section>
+    <div className="dashboard-container">
+    <Sidebar />
     <OrderForm />
+    </div>
     <section>
       {ordersCreated}
     </section>

@@ -62,13 +62,15 @@ const Register = () => {
 
   return (
     <>
-    <section>
+    <div className='container-access flex'>
+    <section className='container-title-icon flex'>
       <h1><FaUser /> Register</h1>
-      <p>Please create an account</p>
+      <p className='register-text'>Please create an account</p>
     </section>
     
-    <section>
+    <section className='container-form'>
       <form onSubmit={onSubmit}>
+        <div className='form-input'>
         <input
         type="text"
         id='name'
@@ -76,8 +78,11 @@ const Register = () => {
         value={name}
         placeholder='Enter your name'
         onChange={onChange} 
+        className='input-access' 
         />
+        </div>
 
+        <div className='form-input'>
         <input
         type="email"
         id='email'
@@ -85,8 +90,11 @@ const Register = () => {
         value={email}
         placeholder='Enter your email'
         onChange={onChange} 
+        className='input-access' 
         />
+        </div>
 
+        <div className='form-input'>
         <input
         type="password"
         id='password'
@@ -94,8 +102,11 @@ const Register = () => {
         value={password}
         placeholder='Enter your password'
         onChange={onChange} 
+        className='input-access' 
         />
+        </div>
 
+        <div className='form-input'>
         <input
         type="password"
         id='password2'
@@ -103,16 +114,18 @@ const Register = () => {
         value={password2}
         placeholder='Confirm your password'
         onChange={onChange} 
+        className='input-access' 
         />
+        </div>
 
-        <div>
-          <button type='submit'>Submit</button>
+        <div className="btn-access">
+          <button className='btn' type='submit'>Register</button>
         </div>
 
       </form>
     </section>
 
-
+    </div>
     </>
   )
 }
