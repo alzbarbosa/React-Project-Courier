@@ -95,6 +95,7 @@ const Login = () => {
       </form>
     </section>
     </div> 
+    
     <div className='right-side'>
     <section>
       <h2 className='title-offer-account'>Don't have an account yet?</h2>

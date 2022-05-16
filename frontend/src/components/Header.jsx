@@ -1,5 +1,4 @@
 import {FaSignInAlt, FaSignOutAlt, FaUser, FaShippingFast} from 'react-icons/fa'
-import {CgTrack} from 'react-icons/cg'
 import {AiOutlineHome} from 'react-icons/ai'
 import { useSelector, useDispatch } from 'react-redux'
 import {logout, reset} from '../features/auth/authSlice'
@@ -27,7 +26,6 @@ const Header = () => {
           <ul className="menu-items">
             <li><Link to="/"><AiOutlineHome/> Home</Link></li>
             <li><Link to="/dashboard"><FaShippingFast/> Shipment</Link></li>
-            <li><Link to="/tracking"><CgTrack /> Tracking</Link></li>
             {user? (
               <li onClick={onLogout}>
                   <FaSignOutAlt />Logout
@@ -55,11 +53,3 @@ const Header = () => {
 
 export default Header
 
-/*
- <li>
-                <button onClick={onLogout}>
-                  <FaSignOutAlt />Logout
-                </button>
-              </li>
-
-*/

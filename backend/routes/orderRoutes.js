@@ -9,3 +9,7 @@ router.route('/:id').patch(protect, updateOrder).delete(protect, deleteOrder)
 
 module.exports = router
 
+/*
+.get(protect, getOrderById)
+*/
+

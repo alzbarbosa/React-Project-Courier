@@ -40,6 +40,7 @@ export const getOrders = createAsyncThunk('orders/getAll', async (_, thunkAPI) =
     }
 })
 
+
 export const orderSlice = createSlice({
     name: 'order',
     initialState,
@@ -74,6 +75,7 @@ export const orderSlice = createSlice({
             state.isError = true
             state.message = action.payload
         })
+
     }
 })
 
